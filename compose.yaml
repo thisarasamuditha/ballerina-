@@ -1,0 +1,28 @@
+services:
+  mysql-db:
+    image: mysql
+    ports:
+      - 3306
+    environment:
+      - MYSQL_ROOT_PASSWORD=PQRxyz@07
+    volumes:
+      - .startup_sql/startup_sql:/docker-entrypoint-initdb.d
+      - mysql-ball:/var/lib/mysql
+    # networks:
+    #   - backnet
+
+  backend:
+    image: ballerina/ballerina
+    ports: 
+      - 9090:9090
+    depends_on:
+      - mysql-db
+    volumes:
+      - ./backend:/home/ballerina
+    
+    command: bal run
+    # networks:
+    #   - backnet
+
+volumes:
+  mysql-ball:

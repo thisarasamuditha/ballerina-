@@ -3,4 +3,4 @@
 	url = https://github.com/pandorian7/movie-tracker
 [submodule "backend"]
 	path = backend
-	url = https://github.com/lakshan-2002/project
+	url = https://github.com/pandorian7/lakshan-project
