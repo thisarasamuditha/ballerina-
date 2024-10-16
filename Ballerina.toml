@@ -1,0 +1,18 @@
+[package]
+org = "lakshan"
+name = "project"
+version = "0.1.0"
+distribution = "2201.10.0"
+
+[build-options]
+observabilityIncluded = true
+
+[[platform.java11.dependency]]
+groupId = "com.mysql"
+artifactId = "mysql-connector-j"
+version = "8.0.31"
+
+[[platform.java11.dependency]]
+path = "D:\\mysql\\MySqlJdbcDriver\\mysql-connector-j-8.0.31.jar"
+
+
